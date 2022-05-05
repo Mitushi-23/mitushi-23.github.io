@@ -8,9 +8,11 @@
   box-sizing: border-box;
 }
 body {
-  
-  background: linear-gradient(90deg, #00829e 0%, #16303e 100%);
+  background: url("../assets/bg/brandi-redd-aJTiW00qqtI-unsplash.jpg");
+  /* background: linear-gradient(90deg, #00829e 0%, #16303e 100%); */
   /* background: linear-gradient(90deg, #00829e 0%, #1631ff 100%); */
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 0%;
   padding: 0%;
 }
@@ -21,7 +23,12 @@ body {
 }
 
 #about{
-  background-color: #031d33b2;
+  /* background-color: #031d33b2; */
+  background: url("../assets/bg/leone-venter-VieM9BdZKFo-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  
 }
 
 .navbar {
@@ -151,7 +158,7 @@ body {
 }
 .second {
   justify-content: center;
-  height: 110vh;
+  height: 90vh;
   display: flex;
   /* justify-content: space-around; */
   align-items: center;
@@ -214,7 +221,7 @@ body {
 .introduction {
   padding: 20px;
   text-align: justify;
-  
+  color: black;
   font-size: 24px;
   
 }
@@ -235,7 +242,7 @@ body {
   justify-content: center;
   align-items: center;
   
-  background-color: #00829e;
+  /* background-color: #00829e; */
   
 }
 
@@ -528,7 +535,7 @@ hr {
   transform: none;
 }
 .tech-interests {
-  background-color: #5ec7e7;
+  /* background-color: #5ec7e7; */
 }
 
 @media only screen and (max-width: 1142px) {
