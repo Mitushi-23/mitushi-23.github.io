@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Plus&family=Joan&family=Nunito+Sans:wght@300&family=Poppins:wght@400;900&family=Play&family=Quicksand:wght@500&display=swap');
+
+:root{
+  --main-col:#ff003d;
+  --main-colo:#f8567c;
+  --main-colo-red:#f8567ce9;
+  --title-colo:#f8bf56;
+  --title-col-yellow:#f8f356;
+  --bl:rgb(27, 27, 27);
+  --colour-blue:#001AFF;
+  --col-blue:#4200FF;
+  --primary:#2196f3;
+  --poppins:'Poppins', sans-serif;
+  --quicksand:'Quicksand', sans-serif;
+  --nunito:'Nunito Sans', sans-serif;
+  --play:'Play', sans-serif;
+}
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+
+body{
+  background-color: black;
+  color: white;
+}
+
+/* 
+font-family: 'Architects Daughter', cursive;
+font-family: 'Caveat', cursive;
+font-family: 'Lobster', cursive;
+font-family: 'Merriweather', serif;
+font-family: 'Nunito Sans', sans-serif;
+font-family: 'Play', sans-serif;
+font-family: 'Tapestry', cursive;
+*/
