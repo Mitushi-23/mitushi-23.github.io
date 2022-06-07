@@ -67,17 +67,16 @@
     font-size: 15px;
     margin-top: 8px;
   }
-  .card .info button {
+  .button {
    text-decoration: none;
    font-size: 18px;
-    color:whitesmoke;
+    color:whitesmoke !important;
     font-weight:600;
     cursor: pointer;
     transition: 0.4s ease;
   }
-  .card .info button:hover {
-    color: var(--primary);
-    
+  .button:hover {
+    color: var(--primary) !important;
     font-size: 20px;
     text-decoration: underline;
   }
@@ -86,3 +85,143 @@
 color: var(--primary);
 font-size:xx-large;
   }
+
+  .icon_1:hover{
+    color: whitesmoke;
+    transform: translateY(-2px);
+      }
+
+     
+      /* MinorProject CSS */
+ /**** Sass Variables ****/
+
+.card-wrapper {
+  /* width: 400px; */
+  /* height: 500px; */
+  /* position: relative; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card_1 {
+  position: relative;
+  /* top: 50%;
+  left: 50%; */
+  display: flex;
+  align-items: flex-end;
+  width: 200px;
+  height: 250px;
+  /* transform: translate(-50%, -50%); */
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  transition: 0.5s;
+}
+.card_1 .card-image {
+  position: relative;
+  /* top: 0px; */
+  /* left: 0px; */
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  -o-object-fit: cover;
+       object-fit: cover;
+  background-color: #000;
+  transition: 0.5s;
+}
+.card_1.card-image img{
+  width: 100%;
+  height: 100%;
+}
+.card_1:hover img {
+  opacity: 0.4;
+  transition: 0.5s;
+}
+
+.card_1:hover .card-image {
+  transform: translateY(-60px);
+  transition: all 0.9s;
+}
+
+/**** Social Icons *****/
+.social-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  display: flex;
+}
+.social-icons li {
+  list-style: none;
+}
+.social-icons li a {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  line-height: 50px;
+  text-align: center;
+  background: #fff;
+  font-size: 23px;
+  color: #333;
+  font-weight: bold;
+  margin: 0 6px;
+  transition: 0.4s;
+  transform: translateY(200px);
+  opacity: 0;
+}
+
+.card_1:hover .social-icons li a {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.social-icons li a:hover {
+  background: #000;
+  transition: 0.2s;
+  color: var(--main-col);
+}
+
+
+
+
+.card_1:hover li:nth-child(1) a {
+  transition-delay: 0.1s;
+}
+
+.card_1:hover li:nth-child(2) a {
+  transition-delay: 0.2s;
+}
+
+.card_1:hover li:nth-child(3) a {
+  transition-delay: 0.3s;
+}
+
+.card_1:hover li:nth-child(4) a {
+  transition-delay: 0.4s;
+}
+
+/**** Personal Details ****/
+.details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background:var(--main-colo);
+  width: 100%;
+  height: 70px;
+  z-index: 1;
+  padding: 10px;
+  /* transform: translate(-10%, -10%);   */
+  /* transform: translateY(-200px); */
+  /* opacity: 1; */
+}
+.details h3 {
+  margin: 10px 0px;
+  color: black;
+  text-align: center;
+}
+
+

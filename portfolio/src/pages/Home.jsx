@@ -2,6 +2,7 @@ import { Container, Typography, Grid } from "@mui/material";
 import React from "react";
 import { MovingComponent } from "react-moving-text";
 import image from '../assets/profile_1.png'
+// import {withRouter} from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -28,7 +29,7 @@ const Home = () => {
             <MovingComponent
               type="slideInFromLeft"
               duration="10s"
-              delay="5s"
+              delay="2s"
               direction="normal"
               timing="ease"
               iteration="Infinite"

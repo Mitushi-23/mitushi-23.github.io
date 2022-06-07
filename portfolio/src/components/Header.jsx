@@ -79,39 +79,49 @@ const Header = () => {
             style={{ fontSize: "22px" }}
             label="Home"
             {...a11yProps(0)}
-            // component={RouterLink}
-            // to="/"
+            component={RouterLink}
+            to="/"
           />
-          <Tab style={{ fontSize: "22px" }} label="About" {...a11yProps(1)} />
+          <Tab style={{ fontSize: "22px" }} label="About" {...a11yProps(1)}  component={RouterLink}
+            to="/about" />
           <Tab
             style={{ fontSize: "22px" }}
             label="Projects"
             {...a11yProps(2)}
-            // component={RouterLink}
-            // to="/project"
+            component={RouterLink}
+            to="/project"
           />
           <Tab
             style={{ fontSize: "22px" }}
             label="Work Experience"
             {...a11yProps(3)}
+            component={RouterLink}
+            to="/workexperience"
           />
         </Tabs>
       </AppBar>
+    
+        
+     
       <SwipeableViews
         axis={theme.direction === "rtl" ? "x-reverse" : "x"}
         index={value}
         onChangeIndex={handleChangeIndex}
         style={{ backgroundColor: "black" }}
       >
+       
+          
         <TabPanel value={value} index={0} dir={theme.direction}>
-          <Home />
+         
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}></TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          <Projects />
+         
         </TabPanel>
         <TabPanel value={value} index={3} dir={theme.direction}></TabPanel>
+        
       </SwipeableViews>
+  
     </Box>
   );
 };
