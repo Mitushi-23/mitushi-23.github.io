@@ -85,4 +85,22 @@ export const MinorProject=[
       'This project is made using React JS, I have fetched API Key to collect the latest news and had shown on this App.To preview this app you have to clone it.',
     github_link: 'https://github.com/Mitushi-23/NewsApp',
   },
+  {
+    id: '10',
+    image: 'ToDo-List',
+    title: 'TodoList',
+    site_link: 'https://mitushi-23.github.io/ToDo-List/',
+    desc:
+      'This project is made using React JS, I have fetched API Key to collect the latest news and had shown on this App.To preview this app you have to clone it.',
+    github_link: 'https://github.com/Mitushi-23/ToDo-List',
+  },
+  {
+    id: '11',
+    image: 'DiceGame',
+    title: 'Dice Game',
+    site_link: 'https://mitushi-23.github.io/DICE_GAME',
+    desc:
+      'This project is made using React JS, I have fetched API Key to collect the latest news and had shown on this App.To preview this app you have to clone it.',
+    github_link: 'https://github.com/Mitushi-23/DICE_GAME',
+  },
 ]
