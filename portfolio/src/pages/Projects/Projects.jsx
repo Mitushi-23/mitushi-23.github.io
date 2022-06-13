@@ -7,9 +7,10 @@ import "./Project.css";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkIcon from "@mui/icons-material/Link";
 import { Link } from "@mui/material";
-import { ProjectInfo, MinorProject } from "./ProjectInfo";
+import { ProjectInfo } from "./ProjectInfo";
 import { NavLink } from "react-router-dom";
 import MinorProjectCarousel from "./MinorProjectCarousel";
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 
 const Projects = () => {
   return (
@@ -23,6 +24,13 @@ const Projects = () => {
         >
           My Projects
         </Typography>
+        <div style={{display:'flex', justifyContent:'center'}}>
+        <FiberManualRecordIcon style={{color:"var(--colour-blue)"}}/>
+        <FiberManualRecordIcon style={{color:"var(--title-colo)"}}/>
+        <FiberManualRecordIcon style={{color:"deeppink"}}/>
+        <FiberManualRecordIcon style={{color:"darkviolet"}}/>
+        <FiberManualRecordIcon style={{color:"coral"}}/>
+        </div>
         <div className="wrapper">
           {ProjectInfo.map((Project) => (
             <Card className="card" style={{ margin: "20px" }}>
@@ -34,6 +42,7 @@ const Projects = () => {
                   ".png")}
                 style={{ borderRadius: "0px" }}
               />
+              <div className="design" style={{backgroundColor:`${Project.tag}`}}></div>
               <div className="info">
                 <Typography
                   variant="h4"
@@ -59,13 +68,25 @@ const Projects = () => {
                   >
                     <GitHubIcon fontSize="medium" className="icon" />
                   </Link>
-                  <Link
-                    href={Project.site_link}
+                  {
+                    // console.log(Project.site_link)
+                    (Project.site_link==='')?(
+                      
+                      <Link
+                    style={{ color: "white" }}
+                    href=""
+                    >
+                    <LinkIcon fontSize="medium" className="icon" />
+                  </Link>
+                    ):
+                    <Link
                     style={{ color: "white" }}
                     target="_blank"
+                    href={Project.site_link}
                   >
                     <LinkIcon fontSize="medium" className="icon" />
                   </Link>
+                  }
                 </div>
 
                 <NavLink

@@ -6,6 +6,17 @@
   justify-content: space-around;
 }
 
+
+  .design {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: -32px;
+    top: -29px;
+    /* background:yellow; */
+    transform: rotateZ(45deg);
+}
+
 .card {
   width: 270px;
   height: 350px;
@@ -45,6 +56,7 @@
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+  background-size: cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -111,6 +123,16 @@
   cursor: pointer;
   transition: 0.5s;
   border: 2px solid var(--main-col);
+}
+
+.design_1 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: -32px;
+  top: -29px;
+ z-index: 2;
+  transform: rotateZ(45deg);
 }
 .card_1 .card-image {
   position: relative;

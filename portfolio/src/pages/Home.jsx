@@ -1,7 +1,8 @@
-import { Container, Typography, Grid } from "@mui/material";
+import { Container, Typography, Grid ,Button } from "@mui/material";
 import React from "react";
 import { MovingComponent } from "react-moving-text";
 import image from '../assets/profile_1.png'
+import FileDownloadTwoToneIcon from '@mui/icons-material/FileDownloadTwoTone';
 // import {withRouter} from 'react-router-dom'
 
 const Home = () => {
@@ -42,6 +43,7 @@ const Home = () => {
             &nbsp;
                 Linux User
             </MovingComponent>
+            <Button variant="outlined" size="large" style={{marginTop:'5%'}} href="https://drive.google.com/file/d/1waBVHodRsR67oneQTejyIFmU2xAEv71R/view?usp=sharing" target="_blank" download startIcon={<FileDownloadTwoToneIcon/>}>Download Resume</Button>
           </Grid>
           <Grid item xs={2}>
             <img

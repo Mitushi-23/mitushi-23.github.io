@@ -10,7 +10,7 @@ import { MinorProject } from "./ProjectInfo";
 import { Link } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkIcon from "@mui/icons-material/Link";
-import './Project.css'
+import "./Project.css";
 
 // const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -32,8 +32,7 @@ const MinorProjectCarousel = () => {
   };
   return (
     <>
-    
-      <Box sx={{ maxWidth: 400, margin:"auto"}}>
+      <Box sx={{ maxWidth: 400, margin: "auto" }}>
         <SwipeableViews
           axis={theme.direction === "rtl" ? "x-reverse" : "x"}
           index={activeStep}
@@ -56,14 +55,14 @@ const MinorProjectCarousel = () => {
                       <div class="card-image">
                         <img
                           src={require("../../assets/projects/" +
-                            Project.image +
-                            ".png")}
+                          Project.image +
+                          ".png")}
                           alt="profile one"
                           height="100%"
                           width="100%"
                         />
                       </div>
-
+                          <div className="design_1" style={{backgroundColor:`${Project.tag}`}}></div>
                       <ul class="social-icons">
                         <li>
                           <Link href={Project.github_link} target="_blank">
@@ -71,10 +70,18 @@ const MinorProjectCarousel = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link href={Project.site_link} target="_blank">
-                           
-                            <LinkIcon />
-                          </Link>
+                          {
+                            // console.log(Project.site_link)
+                            Project.site_link === "" ? (
+                              <Link href="">
+                                <LinkIcon />
+                              </Link>
+                            ) : (
+                              <Link target="_blank" href={Project.site_link}>
+                                <LinkIcon />
+                              </Link>
+                            )
+                          }
                         </li>
                       </ul>
                     </div>
@@ -91,7 +98,7 @@ const MinorProjectCarousel = () => {
           steps={maxSteps}
           position="static"
           activeStep={activeStep}
-          style={{  background:"none" }}
+          style={{ background: "none" }}
           nextButton={
             <Button
               size="small"
@@ -99,9 +106,9 @@ const MinorProjectCarousel = () => {
               disabled={activeStep === maxSteps - 1}
             >
               {theme.direction === "rtl" ? (
-                <KeyboardArrowLeft  />
+                <KeyboardArrowLeft />
               ) : (
-                <KeyboardArrowRight/>
+                <KeyboardArrowRight />
               )}
             </Button>
           }
@@ -112,9 +119,9 @@ const MinorProjectCarousel = () => {
               disabled={activeStep === 0}
             >
               {theme.direction === "rtl" ? (
-                <KeyboardArrowRight  />
+                <KeyboardArrowRight />
               ) : (
-                <KeyboardArrowLeft  />
+                <KeyboardArrowLeft />
               )}
             </Button>
           }

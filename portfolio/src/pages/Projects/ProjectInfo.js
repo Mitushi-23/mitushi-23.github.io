@@ -5,8 +5,12 @@ export const ProjectInfo = [
     title: 'iNotebook',
     site_link: 'https://inotebook23.herokuapp.com',
     desc:
-      'iNotebook is a MERN Stack project which allows the user to signUp or login, to store their notes safely.',
+      'Notes is a good helper to manage your schedules and notes. It gives you a quick and simple notepad editing experience when you write notes.',
+    desc1:
+      'iNotebook stores data in backend safely. Also, uses jwt token and bcrypt hashing for the users to login and store the information safely.',
+    madeUsing: 'MERN Stack.',
     github_link: 'https://github.com/Mitushi-23/iNotebook',
+    tag:'deeppink'
   },
   {
     id: '2',
@@ -14,8 +18,11 @@ export const ProjectInfo = [
     title: 'Tic Tac Toe',
     site_link: 'https://mitushi-23.github.io/Tic-Tac-Toe/',
     desc:
-      'This is a single player and a multiplayer TIC-TAC-TOE Game. It is made using simple HTML,CSS and JS.',
+      'Tic-tac-toe, noughts and crosses, or Xs and Os is a paper-and-pencil game for two players who take turns marking the spaces in a three-by-three grid with X or O. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner.',
     github_link: 'https://github.com/Mitushi-23/Tic-Tac-Toe',
+    desc1: 'It can be played local as well as vs computer.',
+    madeUsing: 'HTML5, CSS and Vanilla JavaScript.',
+    tag:'var(--title-colo)'
   },
   {
     id: '3',
@@ -23,8 +30,11 @@ export const ProjectInfo = [
     title: 'BreakOut',
     site_link: 'https://mitushi-23.github.io/BreakOut/',
     desc:
-      'This is BreakOut Game which can be played on desktop using arrow keys and mouse. It is made using Canvas, and some HTML and CSS.',
+      'BreakOut is a simple game which can be played on desktop.You can use left and right arrow keys or mouse to move the paddle.In this game the player has to break the brick with ball without hitting the floor. If the ball touches the ground then the message "GAME OVER!!!" appears with your final score. If you break all the bricks then the message "Congractulation you won the game!!!" appears.',
+    madeUsing: 'CANVAS.',
+
     github_link: 'https://github.com/Mitushi-23/BreakOut',
+    tag:'coral'
   },
   {
     id: '4',
@@ -32,32 +42,40 @@ export const ProjectInfo = [
     title: 'Digital Clock',
     site_link: 'https://digital-timeclock.netlify.app/',
     desc:
-      'This project is made using React JS, which shows the time for different countries. It is under construction, more features to be added.',
+      "Digital Clock is a World Clock which helps to show the time for different countries. You can browse time of a country by country's name or by country's flag.",
+    madeUsing: 'React JS.',
     github_link: 'https://github.com/Mitushi-23/Digital-Clock',
+    tag:'darkviolet'
   },
-  
+
   {
     id: '6',
     image: 'textApp',
     title: 'My TextApp',
     site_link: 'https://mytextapp.netlify.app/',
     desc:
-      'This project is made using ReactJs. It converts text to upperCase or lowerCase, removes extra spaces, copy the text, count the number of characters and words,capitalize the text and also downloads the generated new text.',
+      'TextApp allows the user to convert text to upperCase or lowerCase, removes extra spaces, copy the text, count the number of characters and words and also tells the time required to read that text,capitalize the text and also downloads the generated new text.',
+    madeUsing: 'React JS.',
     github_link: 'https://github.com/Mitushi-23/Text-App',
+    tag:'darkviolet'
   },
- 
+
   {
     id: '9',
     image: 'msteams_automator',
     title: 'Microsoft Teams Attendance Automator',
     site_link: '',
     desc:
-      'It manifests the meeting organizers to easily sort the absentees and presentees according to their scholar number. It also generates attendance of each student in percentage and highlights it if it is less than the threshold value.To view this visit the github repo given below.',
+      'Microsoft Teams Attendance Automator manifests the meeting organizers to easily sort the absentees and presentees according to their scholar number. It also generates attendance of each student in percentage and highlights it if it is less than the threshold value.To view this visit the github repo given below.',
+    desc1:
+      'To obtain sorted attendance sheet the user has to upload the downloaded csv file and also an excel sheet containg name and scholar number of the students.',
+    madeUsing: 'HTML and CSS as a frontend , Python and Flask as a backend.',
     github_link: 'https://github.com/Python-ProT/msteams-attendance',
+    tag:'var(--colour-blue)'
   },
 ]
 
-export const MinorProject=[
+export const MinorProject = [
   {
     id: '5',
     image: 'analogClock',
@@ -66,6 +84,7 @@ export const MinorProject=[
     desc:
       'This is a simple analog and digital clock which shows the time of India. It is made using simple HTML,CSS and JS.',
     github_link: 'https://github.com/Mitushi-23/Analog-Clock',
+    tag:'var(--title-colo)'
   },
   {
     id: '7',
@@ -75,6 +94,7 @@ export const MinorProject=[
     desc:
       'This is a scientific calculator which can perform many operations on numbers. It is made using HTML,CSS and JS.',
     github_link: 'https://github.com/Mitushi-23/Scientific-Calculator',
+    tag:'var(--title-colo)'
   },
   {
     id: '8',
@@ -84,6 +104,7 @@ export const MinorProject=[
     desc:
       'This project is made using React JS, I have fetched API Key to collect the latest news and had shown on this App.To preview this app you have to clone it.',
     github_link: 'https://github.com/Mitushi-23/NewsApp',
+    tag:'darkviolet'
   },
   {
     id: '10',
@@ -93,6 +114,7 @@ export const MinorProject=[
     desc:
       'This project is made using React JS, I have fetched API Key to collect the latest news and had shown on this App.To preview this app you have to clone it.',
     github_link: 'https://github.com/Mitushi-23/ToDo-List',
+    tag:'var(--title-colo)'
   },
   {
     id: '11',
@@ -102,5 +124,6 @@ export const MinorProject=[
     desc:
       'This project is made using React JS, I have fetched API Key to collect the latest news and had shown on this App.To preview this app you have to clone it.',
     github_link: 'https://github.com/Mitushi-23/DICE_GAME',
+    tag:'coral'
   },
 ]
