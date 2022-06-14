@@ -6,11 +6,11 @@ import { Container } from "@mui/system";
 import "./Project.css";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkIcon from "@mui/icons-material/Link";
-import { Link } from "@mui/material";
+import { Link, Tooltip } from "@mui/material";
 import { ProjectInfo } from "./ProjectInfo";
 import { NavLink } from "react-router-dom";
 import MinorProjectCarousel from "./MinorProjectCarousel";
-import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
+import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 
 const Projects = () => {
   return (
@@ -24,12 +24,22 @@ const Projects = () => {
         >
           My Projects
         </Typography>
-        <div style={{display:'flex', justifyContent:'center'}}>
-        <FiberManualRecordIcon style={{color:"var(--colour-blue)"}}/>
-        <FiberManualRecordIcon style={{color:"var(--title-colo)"}}/>
-        <FiberManualRecordIcon style={{color:"deeppink"}}/>
-        <FiberManualRecordIcon style={{color:"darkviolet"}}/>
-        <FiberManualRecordIcon style={{color:"coral"}}/>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <Tooltip title="Python" arrow placement="top">
+            <FiberManualRecordIcon style={{ color: "var(--colour-blue)" }} />
+          </Tooltip>
+          <Tooltip title="Vanilla JS" arrow placement="top">
+            <FiberManualRecordIcon style={{ color: "var(--title-colo)" }} />
+          </Tooltip>
+          <Tooltip title="MERN Stack" arrow placement="top">
+            <FiberManualRecordIcon style={{ color: "deeppink" }} />
+          </Tooltip>
+          <Tooltip title="React JS" arrow placement="top">
+            <FiberManualRecordIcon style={{ color: "darkviolet" }} />
+          </Tooltip>
+          <Tooltip title="CANVAS" arrow placement="top">
+            <FiberManualRecordIcon style={{ color: "coral" }} />
+          </Tooltip>
         </div>
         <div className="wrapper">
           {ProjectInfo.map((Project) => (
@@ -42,7 +52,10 @@ const Projects = () => {
                   ".png")}
                 style={{ borderRadius: "0px" }}
               />
-              <div className="design" style={{backgroundColor:`${Project.tag}`}}></div>
+              <div
+                className="design"
+                style={{ backgroundColor: `${Project.tag}` }}
+              ></div>
               <div className="info">
                 <Typography
                   variant="h4"
@@ -70,22 +83,19 @@ const Projects = () => {
                   </Link>
                   {
                     // console.log(Project.site_link)
-                    (Project.site_link==='')?(
-                      
+                    Project.site_link === "" ? (
+                      <Link style={{ color: "white" }} href="">
+                        <LinkIcon fontSize="medium" className="icon" />
+                      </Link>
+                    ) : (
                       <Link
-                    style={{ color: "white" }}
-                    href=""
-                    >
-                    <LinkIcon fontSize="medium" className="icon" />
-                  </Link>
-                    ):
-                    <Link
-                    style={{ color: "white" }}
-                    target="_blank"
-                    href={Project.site_link}
-                  >
-                    <LinkIcon fontSize="medium" className="icon" />
-                  </Link>
+                        style={{ color: "white" }}
+                        target="_blank"
+                        href={Project.site_link}
+                      >
+                        <LinkIcon fontSize="medium" className="icon" />
+                      </Link>
+                    )
                   }
                 </div>
 
@@ -102,8 +112,8 @@ const Projects = () => {
           ))}
         </div>
       </Container>
-      <Container style={{ marginBottom: "5%" ,width:'90%'}}>
-<Typography
+      <Container style={{ marginBottom: "5%", width: "90%" }}>
+        <Typography
           variant="h4"
           textAlign="center"
           fontWeight="600"
@@ -111,7 +121,7 @@ const Projects = () => {
         >
           Some minor projects
         </Typography>
-        <MinorProjectCarousel/>
+        <MinorProjectCarousel />
       </Container>
     </>
   );
