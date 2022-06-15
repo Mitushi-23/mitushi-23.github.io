@@ -8,7 +8,7 @@ import EmailIcon from '@mui/icons-material/Email';
 const About = () => {
   return (
     <div>
-      <Typography textAlign="center" variant="h2" textTransform="uppercase" fontFamily='var(--quicksand)' letterSpacing="1.3px" fontWeight="bold">
+      <Typography textAlign="center" variant="h2" textTransform="uppercase" fontFamily='var(--quicksand)' letterSpacing="1.3px" fontWeight="bold" marginY="2%">
         About <span style={{color:'var(--main-col)'}}>Me</span> 
       </Typography>
       <div style={{margin:'0px 10%'}}>

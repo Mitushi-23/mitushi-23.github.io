@@ -1,16 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import SwipeableViews from "react-swipeable-views";
-import { useTheme } from "@mui/material/styles";
+// import SwipeableViews from "react-swipeable-views";
 import AppBar from "@mui/material/AppBar";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import Home from "../pages/Home";
-import Projects from "../pages/Projects/Projects";
-import { Link as RouterLink, MemoryRouter } from "react-router-dom";
-import logo from '../assets/logo.png'
+import { Link as RouterLink } from "react-router-dom";
+import logo from "../assets/logo.png";
 import { Avatar } from "@mui/material";
 
 function TabPanel(props) {
@@ -46,26 +43,35 @@ function a11yProps(index) {
   };
 }
 const Header = () => {
-  const theme = useTheme();
+  // const theme = useTheme();
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
-  const handleChangeIndex = (index) => {
-    setValue(index);
-  };
+  // const handleChangeIndex = (index) => {
+  //   setValue(index);
+  // };
 
   return (
     <Box>
       <AppBar
         position="static"
-        style={{ backgroundColor: "var(--main-col)", color: "black", display:'flex',flexDirection:'row',alignItems:'center' }}
+        style={{
+          backgroundColor: "var(--main-col)",
+          color: "black",
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+        }}
       >
-      <Avatar sx={{ width: 64, height:40 ,margin:'0px 10px'}} src={logo} alt="" />
-        
-        
+        <Avatar
+          sx={{ width: 64, height: 40, margin: "0px 10px" }}
+          src={logo}
+          alt=""
+        />
+
         <Tabs
           value={value}
           onChange={handleChange}
@@ -73,7 +79,7 @@ const Header = () => {
           textColor="inherit"
           variant="fullWidth"
           aria-label="full width tabs example"
-          style={{width:'inherit'}}
+          style={{ width: "inherit" }}
         >
           <Tab
             style={{ fontSize: "22px" }}
@@ -82,8 +88,13 @@ const Header = () => {
             component={RouterLink}
             to="/"
           />
-          <Tab style={{ fontSize: "22px" }} label="About" {...a11yProps(1)}  component={RouterLink}
-            to="/about" />
+          <Tab
+            style={{ fontSize: "22px" }}
+            label="About"
+            {...a11yProps(1)}
+            component={RouterLink}
+            to="/about"
+          />
           <Tab
             style={{ fontSize: "22px" }}
             label="Projects"
@@ -100,10 +111,8 @@ const Header = () => {
           />
         </Tabs>
       </AppBar>
-    
-        
-     
-      <SwipeableViews
+
+      {/* <SwipeableViews
         axis={theme.direction === "rtl" ? "x-reverse" : "x"}
         index={value}
         onChangeIndex={handleChangeIndex}
@@ -120,8 +129,7 @@ const Header = () => {
         </TabPanel>
         <TabPanel value={value} index={3} dir={theme.direction}></TabPanel>
         
-      </SwipeableViews>
-  
+      </SwipeableViews> */}
     </Box>
   );
 };

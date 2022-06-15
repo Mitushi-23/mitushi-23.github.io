@@ -2,16 +2,15 @@ import { Grid, Link, Typography } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkIcon from "@mui/icons-material/Link";
 import React from "react";
-import { ProjectInfo } from "./ProjectInfo";
+import { AllProjects } from "./ProjectInfo";
 import { useParams } from "react-router-dom";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { NavLink } from "react-router-dom";
-import { Container } from "@mui/system";
 
 const ProjectDesc = () => {
   const { id } = useParams();
   // console.log(id)
-  const Project = ProjectInfo.find((p) => p.id === id);
+  const Project = AllProjects.find((p) => p.id === id);
 
   return (
     <>
