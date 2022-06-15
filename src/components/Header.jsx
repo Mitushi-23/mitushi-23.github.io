@@ -87,6 +87,7 @@ const Header = () => {
             {...a11yProps(0)}
             component={RouterLink}
             to="/"
+            className="tab"
           />
           <Tab
             style={{ fontSize: "22px" }}
@@ -94,6 +95,7 @@ const Header = () => {
             {...a11yProps(1)}
             component={RouterLink}
             to="/about"
+            className="tab"
           />
           <Tab
             style={{ fontSize: "22px" }}
@@ -101,6 +103,7 @@ const Header = () => {
             {...a11yProps(2)}
             component={RouterLink}
             to="/project"
+            className="tab"
           />
           <Tab
             style={{ fontSize: "22px" }}
@@ -108,6 +111,7 @@ const Header = () => {
             {...a11yProps(3)}
             component={RouterLink}
             to="/workexperience"
+            className="tab"
           />
         </Tabs>
       </AppBar>

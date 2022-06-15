@@ -16,7 +16,7 @@ import "./Project.css";
 
 function MinorProjectCarousel() {
   return (
-    <div>
+    <Box sx={{ maxWidth: 400, margin: "auto" }}>
       <Carousel>
         {AllProjects.map(
           (Project) =>
@@ -41,6 +41,7 @@ function MinorProjectCarousel() {
                         //   alt={review.author}
                       />
                     </div>
+                    <div className="design_1" style={{backgroundColor:`${Project.tag_colour}`}}></div>
                     <Carousel.Caption>
                       <ul class="social-icons">
                         <li>
@@ -69,11 +70,12 @@ function MinorProjectCarousel() {
                     <h3>{Project.title}</h3>
                   </div>
                 </div>
+                <br />
               </Carousel.Item>
             )
         )}
       </Carousel>
-    </div>
+    </Box>
   );
 }
 

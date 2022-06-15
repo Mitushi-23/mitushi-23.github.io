@@ -2,6 +2,7 @@
 
 :root{
   --main-col:#ff003d;
+  --main-col1:rgba(255, 0, 60, 0.5);
   --main-colo:#f8567c;
   --main-colo-red:#f8567ce9;
   --title-colo:#f8bf56;
@@ -36,3 +37,7 @@ font-family: 'Nunito Sans', sans-serif;
 font-family: 'Play', sans-serif;
 font-family: 'Tapestry', cursive;
 */
+a:hover {
+    /* color: #0a58ca; */
+    color: var(--bl);
+}

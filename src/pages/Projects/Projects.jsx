@@ -34,7 +34,6 @@ const Projects = () => {
           Some minor projects
         </Typography>
         <MinorProjectCarousel />
-        {/* <Entry/> */}
       </Container>
     </>
   );
