@@ -8,8 +8,8 @@
   box-sizing: border-box;
 }
 body {
-  background: url("../assets/bg/brandi-redd-aJTiW00qqtI-unsplash.jpg");
-  /* background: linear-gradient(90deg, #00829e 0%, #16303e 100%); */
+  /* background: url("../assets/bg/brandi-redd-aJTiW00qqtI-unsplash.jpg"); */
+  background: linear-gradient(90deg, #00829e 0%, #16303e 100%);
   /* background: linear-gradient(90deg, #00829e 0%, #1631ff 100%); */
   background-repeat: no-repeat;
   background-size: cover;
@@ -23,8 +23,8 @@ body {
 }
 
 #about{
-  /* background-color: #031d33b2; */
-  background: url("../assets/bg/leone-venter-VieM9BdZKFo-unsplash.jpg");
+  background-color: #031d33b2;
+  /* background: url("../assets/bg/leone-venter-VieM9BdZKFo-unsplash.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
   height: 90vh;
@@ -130,14 +130,14 @@ body {
 
 .heading {
   
-    position: relative;
-    background-color: aliceblue;
+    /* position: relative; */
+    /* background-color: aliceblue; */
     /* border-radius: 50%; */
     padding: 40px;
     /* width: fit-content; */
     /* top: -36%; */
     /* z-index: 1; */
-    right: -112px;
+    /* right: -112px; */
     width: 681px;
     height: 300px;
  
@@ -174,13 +174,13 @@ body {
 }
 .img {
   /* margin: auto; */
-  margin-top: 20px;
-  /* margin-left: 200px; */
+  /* margin-top: 20px; */
+  margin-left: 200px;
   padding: 5px;
-  position: relative;
-  z-index: 1;
+  /* position: relative; */
+  /* z-index: 1; */
   /* overflow: hidden; */
-  right: -10;
+  /* right: -10; */
   border-radius: 50%;
 }
 
@@ -221,7 +221,7 @@ body {
 .introduction {
   padding: 20px;
   text-align: justify;
-  color: black;
+  /* color: black; */
   font-size: 24px;
   
 }
@@ -535,7 +535,7 @@ hr {
   transform: none;
 }
 .tech-interests {
-  /* background-color: #5ec7e7; */
+  background-color: #14a5e485;
 }
 
 #myBtn {

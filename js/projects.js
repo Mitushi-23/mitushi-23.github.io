@@ -62,7 +62,14 @@ let text = `{
 "",
 "It manifests the meeting organizers to easily sort the absentees and presentees according to their scholar number. It also generates attendance of each student in percentage and highlights it if it is less than the threshold value.To view this visit the github repo given below.",
 "https://github.com/Python-ProT/msteams-attendance",
-"data-aos='flip-left'"]
+"data-aos='flip-left'"],
+
+["assets/projects/qr_generator.png",
+"QR Code Generator",
+"",
+"You can generate scan and upload QR Code to obtain required text or link. It made using ReactJS.",
+"https://github.com/Mitushi-23/QR_Code_Generator",
+"data-aos='fade-left'"]
 
 ]}`
 
