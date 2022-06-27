@@ -17,7 +17,7 @@ const Projects = () => {
           fontWeight="600"
           style={{ fontFamily: "var(--quicksand)", margin: "3% 0px" }}
         >
-          My Projects
+          All Projects
         </Typography>
         <ProjectsNav/>
         <div className="wrapper">

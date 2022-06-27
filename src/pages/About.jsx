@@ -12,9 +12,9 @@ const About = () => {
         About <span style={{color:'var(--main-col)'}}>Me</span> 
       </Typography>
       <div style={{margin:'0px 10%'}}>
-        <Grid container marginY="8%">
+        <Grid className="home ab" container marginY="8%">
           <Grid item md="6">
-            <img src={img} alt="" height="500" style={{ borderRadius: "50%" }} />
+            <img  className="profile" src={img} alt="" height="500" style={{ borderRadius: "50%" }} />
           </Grid>
           <Grid item md="6" marginY="2%">
             <Box border="0.5px solid white" boxShadow="2.5px 2.5px" padding="30px">

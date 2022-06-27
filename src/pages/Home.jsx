@@ -1,16 +1,17 @@
-import { Container, Typography, Grid ,Button } from "@mui/material";
+import { Container, Typography, Grid, Button } from "@mui/material";
 import React from "react";
 import { MovingComponent } from "react-moving-text";
-import image from '../assets/profile_1.png'
-import FileDownloadTwoToneIcon from '@mui/icons-material/FileDownloadTwoTone';
+import image from "../assets/profile_1.png";
+import FileDownloadTwoToneIcon from "@mui/icons-material/FileDownloadTwoTone";
 // import {withRouter} from 'react-router-dom'
 
 const Home = () => {
+ 
   return (
     <>
-      <Container style={{ marginTop: "5%" }}>
-        <Grid container marginLeft="-10%">
-          <Grid item xs={8} marginTop="20%">
+      <Container  style={{ marginTop: "5%" }}>
+        <Grid className="home" container marginLeft="-10%">
+          <Grid className="heading" item md={6} sm={6} lg={8} marginTop="20%">
             <Typography variant="h3" style={{ color: "var(--main-col)" }}>
               Hi..
             </Typography>
@@ -35,22 +36,27 @@ const Home = () => {
               timing="ease"
               iteration="Infinite"
               fillMode="none"
-              style={{fontSize:'22px'}}
+              style={{ fontSize: "22px" }}
             >
-               Full Stack Developer
-            &nbsp;
-               Competitive Programmer
-            &nbsp;
-                Linux User
+              Full Stack Developer &nbsp; Competitive Programmer &nbsp; Linux
+              User
             </MovingComponent>
-            <Button variant="outlined" size="large" style={{marginTop:'5%'}} href="https://drive.google.com/file/d/1waBVHodRsR67oneQTejyIFmU2xAEv71R/view?usp=sharing" target="_blank" download startIcon={<FileDownloadTwoToneIcon/>}>Download Resume</Button>
+            <Button
+              variant="outlined"
+              size="large"
+              style={{ marginTop: "5%" }}
+              href="https://drive.google.com/file/d/1waBVHodRsR67oneQTejyIFmU2xAEv71R/view?usp=sharing"
+              target="_blank"
+              download
+              startIcon={<FileDownloadTwoToneIcon />}
+            >
+              Download Resume
+            </Button>
+            <br />
+            <br />
           </Grid>
-          <Grid item xs={2}>
-            <img
-              src={image}
-              alt=""
-              height="700px"
-            />
+          <Grid className="image" item md={6} sm={6} lg={4}>
+            <img className="profile" src={image} alt="" height="auto"/>
           </Grid>
         </Grid>
       </Container>

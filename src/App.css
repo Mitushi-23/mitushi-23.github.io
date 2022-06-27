@@ -24,8 +24,8 @@
 
 
 body{
-  background-color: black;
-  color: white;
+  background-color: black !important;
+  color: white !important;
 }
 
 /* 
@@ -40,4 +40,51 @@ font-family: 'Tapestry', cursive;
 a:hover {
     /* color: #0a58ca; */
     color: var(--bl);
+}
+
+@media (max-width:1500px) {
+.home{
+  display: flex !important;
+  flex-direction: column-reverse !important;
+  /* margin:'0px'!important; */
+  justify-content: center !important;
+  align-items: center !important;
+  margin: auto !important;
+}
+.ab{
+  flex-direction: column !important;
+}
+.heading{
+  margin-top: 5% !important;
+}
+.home .image{
+  max-width: 66.66%;
+}
+}
+
+@media (max-width:700px) {
+  .profile{
+    height: 300px !important;
+    /* width: 500px; */
+  }
+  .heading{
+    margin-top: 10px;
+    margin-left: auto !important;
+  }
+  .heading h3{
+    font-size: 45px;
+  }
+  .heading h2{
+    font-size: 40px;
+  }
+  .project{
+    width: 300px;
+    height: 170px;
+  }
+}
+
+@media (max-width:500px) {
+  .all_project{
+    font-size: 18px !important;
+  }
 }

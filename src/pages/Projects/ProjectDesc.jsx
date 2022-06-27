@@ -29,9 +29,10 @@ const ProjectDesc = () => {
           &nbsp;GO BACK
         </div>
 
-        <Grid container style={{ justifyContent: "center" }} marginTop="5%">
+        <Grid className="home ab" container style={{ justifyContent: "center" }} marginTop="5%">
           <Grid item md="4">
             <img
+            className="project"
               src={require("../../assets/projects/" + Project.image + ".png")}
               alt=""
               height="300px"
@@ -43,7 +44,7 @@ const ProjectDesc = () => {
               }}
             />
           </Grid>
-          <Grid item md="5">
+          <Grid item md="5" sm="8" xs="8">
             <Typography
               variant="h3"
               color="var(--main-col)"

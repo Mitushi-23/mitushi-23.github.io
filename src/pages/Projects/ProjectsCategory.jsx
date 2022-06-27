@@ -10,7 +10,6 @@ import { Link } from "@mui/material";
 import { AllProjects } from "./ProjectInfo";
 import { NavLink } from "react-router-dom";
 import ProjectsNav from "./ProjectsNav";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 const ProjectsCategory = (props) => {
   return (
@@ -24,16 +23,6 @@ const ProjectsCategory = (props) => {
         >
           {props.category} Projects
         </Typography>
-        <NavLink
-          to="/project"
-          style={{
-            textDecoration: "none",
-            color: "white",
-            marginBottom: "20px",
-          }}
-        >
-          <ArrowBackIcon /> &nbsp; GO BACK
-        </NavLink>
         <ProjectsNav />
         <div className="wrapper">
           {AllProjects.map(

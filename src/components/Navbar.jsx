@@ -1,56 +1,197 @@
-import React from 'react'
-import {AppBar, Tab, Tabs} from '@mui/material'
-import Home from '../pages/Home';
-import About from '../pages/About';
-import Projects from '../pages/Projects/Projects';
-import WorkExperience from '../pages/WorkExperience';
+import React from "react";
+import { styled, useTheme } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import Drawer from "@mui/material/Drawer";
+import CssBaseline from "@mui/material/CssBaseline";
+import MuiAppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import List from "@mui/material/List";
+import Typography from "@mui/material/Typography";
+import Divider from "@mui/material/Divider";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import InboxIcon from "@mui/icons-material/MoveToInbox";
+import MailIcon from "@mui/icons-material/Mail";
+import { Avatar } from "@mui/material";
+import logo from "../assets/logo.png";
+import { NavLink, useNavigate } from "react-router-dom";
 
-const Navbar = props => {
-    const {match,history} = props;
-    const {params} = match;
-    const {page} = params;
-    console.log(page);
+const drawerWidth = 240;
 
-    const tabNameToIndex = {
-        0: "about",
-        1: "contact"
-      };
-    
-      const indexToTabName = {
-        about: 0,
-        contact: 1
-      };
+const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
+  ({ theme, open }) => ({
+    flexGrow: 1,
+    padding: theme.spacing(3),
+    transition: theme.transitions.create("margin", {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+    marginLeft: `-${drawerWidth}px`,
+    ...(open && {
+      transition: theme.transitions.create("margin", {
+        easing: theme.transitions.easing.easeOut,
+        duration: theme.transitions.duration.enteringScreen,
+      }),
+      marginLeft: 0,
+    }),
+  })
+);
 
-    const [selectedTab, setSelectedTab] = React.useState(indexToTabName[page]);
+const AppBar = styled(MuiAppBar, {
+  shouldForwardProp: (prop) => prop !== "open",
+})(({ theme, open }) => ({
+  transition: theme.transitions.create(["margin", "width"], {
+    easing: theme.transitions.easing.sharp,
+    duration: theme.transitions.duration.leavingScreen,
+  }),
+  ...(open && {
+    width: `calc(100% - ${drawerWidth}px)`,
+    marginLeft: `${drawerWidth}px`,
+    transition: theme.transitions.create(["margin", "width"], {
+      easing: theme.transitions.easing.easeOut,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+  }),
+}));
 
-  const handleChange = (event, newValue) => {
-    history.push(`/home/${tabNameToIndex[newValue]}`);
-    setSelectedTab(newValue);
+const DrawerHeader = styled("div")(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  padding: theme.spacing(0, 1),
+  // necessary for content to be below app bar
+  ...theme.mixins.toolbar,
+  justifyContent: "flex-end",
+}));
+
+const Navbar = () => {
+  const theme = useTheme();
+  const [open, setOpen] = React.useState(false);
+
+ const navigate = useNavigate();
+
+  const handleClick = (val) => {
+    if (val === "Home") {
+      navigate("/");
+    }
+  };
+
+  const handleDrawerOpen = () => {
+    setOpen(true);
+  };
+
+  const handleDrawerClose = () => {
+    setOpen(false);
   };
 
   return (
-    <>
-    <AppBar position='static'>
-    <Tabs
-          value={selectedTab}
-          onChange={handleChange}
-          indicatorColor="secondary"
-          textColor="inherit"
-          variant="fullWidth"
-          aria-label="full width tabs example"
-        >
-          <Tab label="Home"  />
-          <Tab label="About"    />
-          <Tab label="Projects"  />
-          <Tab label="Work Experience"  />
-        </Tabs>
-        </AppBar>
-        {selectedTab===0 && <Home/>}
-        {selectedTab===1 && <About/>}
-        {selectedTab===2 && <Projects/>}
-        {selectedTab===3 && <WorkExperience/>}
-    </>
-  )
-}
+    <Box sx={{ display: "flex" }}>
+      <CssBaseline />
+      <AppBar
+        position="fixed"
+        open={open}
+        style={{ backgroundColor: "var(--main-col)"}}
+      >
+        <Toolbar>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            onClick={handleDrawerOpen}
+            edge="start"
+            sx={{ mr: 2, ...(open && { display: "none" }) }}
+          >
+            <MenuIcon style={{color:'black'}} />
+          </IconButton>
+          {/* <Typography variant="h6" noWrap component="div"> */}
+          <Avatar
+            sx={{ width: 64, height: 40, margin: "0px 10px" }}
+            src={logo}
+            alt=""
+          />
+          {/* </Typography> */}
+        </Toolbar>
+      </AppBar>
+      <Drawer
+        sx={{
+          width: drawerWidth,
+          flexShrink: 0,
+          "& .MuiDrawer-paper": {
+            width: drawerWidth,
+            boxSizing: "border-box",
+          },
+        }}
+        variant="persistent"
+        anchor="left"
+        open={open}
+      >
+        <DrawerHeader>
+          <IconButton onClick={handleDrawerClose}>
+            {theme.direction === "ltr" ? (
+              <ChevronLeftIcon />
+            ) : (
+              <ChevronRightIcon />
+            )}
+          </IconButton>
+        </DrawerHeader>
+        <Divider />
+        <List>
+          {/* {["Home", "About", "Projects", "Work Experience"].map(
+            (text, index) => ( */}
+              <ListItem disablePadding>
+                <ListItemButton >
+                <NavLink to="/" style={{textDecoration:'none',color:'black'}} onClick={handleDrawerClose}>
+                  <ListItemText primary="Home" />
+                  </NavLink>
+                </ListItemButton>
+              </ListItem>
+              <ListItem disablePadding>
+                <ListItemButton >
+                    <NavLink to="/about" style={{textDecoration:'none',color:'black'}} onClick={handleDrawerClose}>
+                  <ListItemText primary="About" />
+                  </NavLink>
+                </ListItemButton>
+              </ListItem>
+              <ListItem disablePadding>
+                <ListItemButton >
+                <NavLink to="/project" style={{textDecoration:'none',color:'black'}} onClick={handleDrawerClose}>
+                  <ListItemText primary="Projects" />
+                  </NavLink>
+                </ListItemButton>
+              </ListItem>
+              <ListItem disablePadding>
+                <ListItemButton >
+                <NavLink to="/workexperience" style={{textDecoration:'none',color:'black'}} onClick={handleDrawerClose}>
+                  <ListItemText primary="Work Experience" />
+                  </NavLink>
+                </ListItemButton>
+              </ListItem>
+            {/* )
+          )} */}
+        </List>
+        <Divider />
+        {/* <List>
+            {['All mail', 'Trash', 'Spam'].map((text, index) => (
+              <ListItem key={text} disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  </ListItemIcon>
+                  <ListItemText primary={text} />
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List> */}
+      </Drawer>
+      <Main open={open}>
+        <DrawerHeader />
+      </Main>
+    </Box>
+  );
+};
 
-export default Navbar
+export default Navbar;

@@ -15,6 +15,21 @@ export const AllProjects = [
     category:'major'
   },
   {
+    id: '12',
+    image: 'ShoppieShop',
+    title: 'ShoppieShop',
+    site_link: 'https://shoppieshop.netlify.app/',
+    desc:
+      'ShoppieShop is an Amazon clone, a full stack project made using ReactJs, MongoDb, ExpressJs, NodeJs, Bcrypt, JWT Authentication.',
+      desc1:
+      "It allows customers to add the item to cart and also contains the payment gateway.",
+    madeUsing: 'MERN Stack.',
+    github_link: 'https://github.com/Mitushi-23/eCommerce-website',
+    tag_colour:'deeppink',
+    tag:'MERN Stack',
+    category:'major'
+  },
+  {
     id: '2',
     image: 'tic-tac-toe',
     title: 'Tic Tac Toe',
@@ -42,6 +57,7 @@ export const AllProjects = [
     tag:'CANVAS',
     category:'major'
   },
+ 
   {
     id: '4',
     image: 'digitalClock',
@@ -55,21 +71,6 @@ export const AllProjects = [
     tag:'React JS',
     category:'major'
   },
-
-  {
-    id: '5',
-    image: 'textApp',
-    title: 'My TextApp',
-    site_link: 'https://mytextapp.netlify.app/',
-    desc:
-      'TextApp allows the user to convert text to upperCase or lowerCase, removes extra spaces, copy the text, count the number of characters and words and also tells the time required to read that text,capitalize the text and also downloads the generated new text.',
-    madeUsing: 'React JS.',
-    github_link: 'https://github.com/Mitushi-23/Text-App',
-    tag_colour:'darkviolet',
-    tag:'React JS',
-    category:'major'
-  },
-
   {
     id: '6',
     image: 'msteams_automator',
@@ -86,13 +87,56 @@ export const AllProjects = [
     category:'major'
   }, 
   {
+    id: '5',
+    image: 'textApp',
+    title: 'My TextApp',
+    site_link: 'https://mytextapp.netlify.app/',
+    desc:
+      'TextApp allows the user to convert text to upperCase or lowerCase, removes extra spaces, copy the text, count the number of characters and words and also tells the time required to read that text,capitalize the text and also downloads the generated new text.',
+    madeUsing: 'React JS.',
+    github_link: 'https://github.com/Mitushi-23/Text-App',
+    tag_colour:'darkviolet',
+    tag:'React JS',
+    category:'major'
+  },
+
+  
+  {
     id: '7',
+    image: 'qr_generator',
+    title: 'QR Code Generator',
+    site_link: '',
+    desc:
+      'You can generate scan and upload QR Code to obtain required text or link. It made using ReactJS.',
+      madeUsing:'React JS.',
+    github_link: 'https://github.com/Mitushi-23/QR_Code_Generator',
+    tag_colour:'darkviolet',
+    tag:'React JS',
+    category:'minor',
+    c_id:'6'
+  },
+  {
+    id: '14',
+    image: 'login_signup',
+    title: 'Login/SignUp Page',
+    site_link: 'https://login-signup-page-22.netlify.app/',
+    desc:
+      'This is a simple login signUp page which allow user to login and signUp.',
+    madeUsing: 'React JS and Redux.',
+    github_link: 'https://github.com/Mitushi-23/Login-SignUp-Page',
+    tag_colour:'darkviolet',
+    tag:'React JS',
+    category:'minor'
+  },
+  {
+    id: '13',
     image: 'analogClock',
     title: 'Analog Clock',
     site_link: 'https://mitushi-23.github.io/Analog-Clock/',
     desc:
       'This is a simple analog and digital clock which shows the time of India. It is made using simple HTML,CSS and JS.',
     github_link: 'https://github.com/Mitushi-23/Analog-Clock',
+    madeUsing:'Vanilla JS.',
     tag_colour:'var(--title-colo)',
     tag:'Vanilla JS',
     category:'minor',
@@ -106,6 +150,7 @@ export const AllProjects = [
     desc:
       'This is a scientific calculator which can perform many operations on numbers. It is made using HTML,CSS and JS.',
     github_link: 'https://github.com/Mitushi-23/Scientific-Calculator',
+    madeUsing:'Vanilla JS.',
     tag_colour:'var(--title-colo)',
     tag:'Vanilla JS',
     category:'minor',
@@ -119,6 +164,7 @@ export const AllProjects = [
     desc:
       'This project is made using React JS, I have fetched API Key to collect the latest news and had shown on this App.To preview this app you have to clone it.',
     github_link: 'https://github.com/Mitushi-23/NewsApp',
+    madeUsing:'React JS.',
     tag_colour:'darkviolet',
     tag:'React JS',
     category:'minor',
@@ -132,6 +178,7 @@ export const AllProjects = [
     desc:
       'This project is made using React JS, I have fetched API Key to collect the latest news and had shown on this App.To preview this app you have to clone it.',
     github_link: 'https://github.com/Mitushi-23/ToDo-List',
+    madeUsing:'Vanilla JS.',
     tag_colour:'var(--title-colo)',
     tag:'Vanilla JS',
     category:'minor',
@@ -145,6 +192,7 @@ export const AllProjects = [
     desc:
       'This project is made using React JS, I have fetched API Key to collect the latest news and had shown on this App.To preview this app you have to clone it.',
     github_link: 'https://github.com/Mitushi-23/DICE_GAME',
+    madeUsing:'CANVAS.',
     tag_colour:'coral',
     tag:'CANVAS',
     category:'minor',
