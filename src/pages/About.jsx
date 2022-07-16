@@ -12,7 +12,7 @@ const About = () => {
         About <span style={{color:'var(--main-col)'}}>Me</span> 
       </Typography>
       <div style={{margin:'0px 10%'}}>
-        <Grid className="home ab" container marginY="8%">
+        <Grid className="home ab" container marginTop="8%">
           <Grid item md="6">
             <img  className="profile" src={img} alt="" height="500" style={{ borderRadius: "50%" }} loading="lazy"/>
           </Grid>

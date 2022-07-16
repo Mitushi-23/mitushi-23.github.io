@@ -8,6 +8,7 @@
   --main-header-red:#dc3545;
   --title-colo:#f8bf56;
   --title-col-yellow:#f8f356;
+  --footer-bg:#80808073;
   --bl:rgb(27, 27, 27);
   --colour-blue:#001AFF;
   --col-blue:#4200FF;
@@ -41,6 +42,26 @@ font-family: 'Tapestry', cursive;
 a:hover {
     /* color: #0a58ca; */
     color: var(--bl);
+}
+
+.insta :hover{
+ color: var(--main-colo) !important;
+ transform: translateY(2px);
+}
+
+.twit :hover{
+  color:var(--primary);
+  transform: translateY(2px);
+}
+
+.linke :hover{
+  transform: translateY(2px);
+  color:var(--col-blue)
+}
+
+.git :hover{
+  color:var(--footer-bg);
+  transform: translateY(2px);
 }
 
 @media (max-width:1500px) {
@@ -87,5 +108,9 @@ a:hover {
 @media (max-width:500px) {
   .all_project{
     font-size: 18px !important;
+  }
+  .foot{
+    width:300px;
+    margin: auto;
   }
 }

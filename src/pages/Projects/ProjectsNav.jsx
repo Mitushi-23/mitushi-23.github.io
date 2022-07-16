@@ -1,9 +1,7 @@
 import React from 'react'
 import { NavLink } from "react-router-dom";
-import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import {  Tooltip } from "@mui/material";
 import canvas from '../../assets/canvas_logo.png'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import 'font-awesome/css/font-awesome.min.css';
  
 

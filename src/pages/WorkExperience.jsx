@@ -4,7 +4,6 @@ import 'react-vertical-timeline-component/style.min.css';
 import StarIcon from '@mui/icons-material/Star';
 import WorkIcon from '@mui/icons-material/Work';
 import { Typography } from '@mui/material';
-
 const WorkExperience = () => {
   return (
     <>

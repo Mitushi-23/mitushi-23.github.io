@@ -14,6 +14,7 @@ import WorkExperience from './pages/WorkExperience'
 import ReactProjects from './pages/Projects/ProjectsCategory'
 import { useEffect, useState } from 'react'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import SwipeableRoutes from 'react-swipeable-routes'
@@ -58,6 +59,7 @@ function App() {
         <Route exact path="/project/python"  element={<ReactProjects category="Python"/>}/>
         <Route exact path="/project/canvas"  element={<ReactProjects category="CANVAS"/>}/>
       </Routes>
+      <Footer/>
     </Router>
   )
 }

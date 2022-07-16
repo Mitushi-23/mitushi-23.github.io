@@ -23,7 +23,7 @@ const Projects = () => {
           <ProjectCard/>
         </div>
       </Container>
-      <Container style={{ marginBottom: "5%", width: "90%" }}>
+      <Container style={{ width: "90%" }}>
         <Typography
           variant="h4"
           textAlign="center"
