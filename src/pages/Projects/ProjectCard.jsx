@@ -12,13 +12,13 @@ import Masonry from "@mui/lab/Masonry";
 const ProjectCard = () => {
   return (
     <>
-      <Masonry columns={3} spacing={2} style={{margin:'auto'}}>
+      <Masonry columns={4} spacing={2} style={{margin:'auto'}}>
         {AllProjects.map(
           (Project) =>
           Project.category === "major" && (
             <Card className="card" style={{ margin: "20px",
             height:`${Project.height}`,
-            width:'320px'
+            width:'350px'
                }}>
                 <img
                   src={`${require("../../assets/projects/" +

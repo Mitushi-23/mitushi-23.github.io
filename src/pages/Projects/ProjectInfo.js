@@ -27,7 +27,7 @@ export const AllProjects = [
     github_link: 'https://github.com/Mitushi-23/eCommerce-website',
     tag_colour:'deeppink',
     tag:'MERN Stack',
-    category:'major',height:'380px'
+    category:'major',height:'260px'
   },
   {
     id: '2',
@@ -44,6 +44,33 @@ export const AllProjects = [
     category:'major',height:'170px'
   },
   {
+    id: '15',
+    image: 'portfolioWebsite',
+    title: 'Portfolio Website',
+    site_link: 'https://mitushi-23.github.io/',
+    desc:
+      "This is my initial portfolio website, showcasing my work, skills and field of interest.",
+    madeUsing: 'HTML5, CSS, Vanilla JavaScript, JQuery.',
+    github_link: 'https://github.com/Mitushi-23/mitushi-23.github.io',
+    tag_colour:'var(--title-colo)',
+    tag:'Vanilla JS',
+    category:'major',height:'260px'
+  },
+  
+  {
+    id: '5',
+    image: 'textApp',
+    title: 'My TextApp',
+    site_link: 'https://mytextapp.netlify.app/',
+    desc:
+    'TextApp allows the user to convert text to upperCase or lowerCase, removes extra spaces, copy the text, count the number of characters and words and also tells the time required to read that text,capitalize the text and also downloads the generated new text.',
+    madeUsing: 'React JS.',
+    github_link: 'https://github.com/Mitushi-23/Text-App',
+    tag_colour:'darkviolet',
+    tag:'React JS',
+    category:'major',height:'200px'
+  },
+  {
     id: '3',
     image: 'breakout',
     title: 'BreakOut',
@@ -55,20 +82,7 @@ export const AllProjects = [
     github_link: 'https://github.com/Mitushi-23/BreakOut',
     tag_colour:'coral',
     tag:'CANVAS',
-    category:'major',height:'190px'
-  },
-  {
-    id: '5',
-    image: 'textApp',
-    title: 'My TextApp',
-    site_link: 'https://mytextapp.netlify.app/',
-    desc:
-      'TextApp allows the user to convert text to upperCase or lowerCase, removes extra spaces, copy the text, count the number of characters and words and also tells the time required to read that text,capitalize the text and also downloads the generated new text.',
-    madeUsing: 'React JS.',
-    github_link: 'https://github.com/Mitushi-23/Text-App',
-    tag_colour:'darkviolet',
-    tag:'React JS',
-    category:'major',height:'400px'
+    category:'major',height:'320px'
   },
   {
     id: '4',
@@ -76,29 +90,29 @@ export const AllProjects = [
     title: 'Digital Clock',
     site_link: 'https://digital-timeclock.netlify.app/',
     desc:
-      "Digital Clock is a World Clock which helps to show the time for different countries. You can browse time of a country by country's name or by country's flag.",
+    "Digital Clock is a World Clock which helps to show the time for different countries. You can browse time of a country by country's name or by country's flag.",
     madeUsing: 'React JS.',
     github_link: 'https://github.com/Mitushi-23/Digital-Clock',
     tag_colour:'darkviolet',
     tag:'React JS',
-    category:'major',height:'260px'
+    category:'major',height:'170px'
   },
+  
   {
     id: '6',
     image: 'msteams_automator',
     title: 'Microsoft Teams Attendance Automator',
     site_link: '',
     desc:
-      'Microsoft Teams Attendance Automator manifests the meeting organizers to easily sort the absentees and presentees according to their scholar number. It also generates attendance of each student in percentag_coloure and highlights it if it is less than the threshold value.To view this visit the github repo given below.',
+    'Microsoft Teams Attendance Automator manifests the meeting organizers to easily sort the absentees and presentees according to their scholar number. It also generates attendance of each student in percentag_coloure and highlights it if it is less than the threshold value.To view this visit the github repo given below.',
     desc1:
-      'To obtain sorted attendance sheet the user has to upload the downloaded csv file and also an excel sheet containg name and scholar number of the students.',
+    'To obtain sorted attendance sheet the user has to upload the downloaded csv file and also an excel sheet containg name and scholar number of the students.',
     madeUsing: 'HTML and CSS as a frontend , Python and Flask as a backend.',
     github_link: 'https://github.com/Python-ProT/msteams-attendance',
     tag_colour:'var(--colour-blue)',
     tag:'Python',
     category:'major',height:'260px'
   }, 
-  
 
   
   {
