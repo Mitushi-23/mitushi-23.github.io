@@ -11,7 +11,7 @@ const Footer = () => {
     const [value, setValue] = React.useState(0);
   return (
     <>
-     <Box sx={{ width: '500px' , margin:'auto',marginTop:'4%',marginBottom:'2%'}}>
+     <Box className='footer' sx={{ width: '500px' , margin:'auto',marginTop:'4%',marginBottom:'2%'}}>
       <BottomNavigation
         showLabels
         value={value}

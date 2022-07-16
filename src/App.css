@@ -109,6 +109,10 @@ a:hover {
   .all_project{
     font-size: 18px !important;
   }
+  .footer{
+    width: 300px;
+    margin-left: 10%;
+  }
   .foot{
     width:300px;
     margin: auto;
