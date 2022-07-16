@@ -110,11 +110,20 @@ a:hover {
     font-size: 18px !important;
   }
   .footer{
-    width: 300px;
-    margin-left: 10%;
+    width: 300px !important;
+    margin-left: 10% !important;
   }
   .foot{
     width:300px;
     margin: auto;
+  }
+  .card_1{
+    width: 250px !important;
+  }
+  .social-icons{
+    left:50% !important;
+  }
+  .card{
+    width:300px !important;
   }
 }
