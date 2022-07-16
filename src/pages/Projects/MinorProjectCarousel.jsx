@@ -32,6 +32,7 @@ function MinorProjectCarousel() {
                           alt=""
                         height="100%"
                         width="100%"
+                        loading="lazy"
                       />
                     </div>
                     <div className="design_1" style={{backgroundColor:`${Project.tag_colour}`}}></div>

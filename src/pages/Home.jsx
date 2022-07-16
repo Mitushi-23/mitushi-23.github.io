@@ -56,7 +56,7 @@ const Home = () => {
             <br />
           </Grid>
           <Grid className="image" item md={6} sm={6} lg={4}>
-            <img className="profile" src={image} alt="" height="auto"/>
+            <img className="profile" src={image} alt="" height="auto" loading="lazy"/>
           </Grid>
         </Grid>
       </Container>

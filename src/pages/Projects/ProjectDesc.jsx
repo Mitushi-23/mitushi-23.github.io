@@ -42,6 +42,7 @@ const ProjectDesc = () => {
                 border: "5px solid var(--main-col)",
                 padding: "2px",
               }}
+              loading="lazy"
             />
           </Grid>
           <Grid item md="5" sm="8" xs="8">

@@ -12,7 +12,7 @@ import Masonry from "@mui/lab/Masonry";
 const ProjectCard = () => {
   return (
     <>
-      <Masonry columns={3} spacing={2} >
+      <Masonry columns={3} spacing={2} style={{margin:'auto'}}>
         {AllProjects.map(
           (Project) =>
           Project.category === "major" && (

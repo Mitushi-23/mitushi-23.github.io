@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-// import SwipeableViews from "react-swipeable-views";
 import AppBar from "@mui/material/AppBar";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -9,6 +8,11 @@ import Box from "@mui/material/Box";
 import { Link as RouterLink } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { Avatar } from "@mui/material";
+import Toolbar from '@mui/material/Toolbar';
+import useScrollTrigger from '@mui/material/useScrollTrigger';
+import Fab from '@mui/material/Fab';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import Fade from '@mui/material/Fade';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -42,24 +46,60 @@ function a11yProps(index) {
     "aria-controls": `full-width-tabpanel-${index}`,
   };
 }
-const Header = () => {
-  // const theme = useTheme();
+
+function ScrollTop(props) {
+  const { children, window } = props;
+  const trigger = useScrollTrigger({
+    target: window ? window() : undefined,
+    disableHysteresis: true,
+    threshold: 100,
+  });
+
+  const handleClick = (event) => {
+    const anchor = (event.target.ownerDocument || document).querySelector(
+      '#back-to-top-anchor',
+    );
+
+    if (anchor) {
+      anchor.scrollIntoView({
+        block: 'center',
+      });
+    }
+  };
+
+  return (
+    <Fade in={trigger}>
+      <Box
+        onClick={handleClick}
+        role="presentation"
+        sx={{ position: 'fixed', bottom: 20, right: 20 }}
+      >
+        {children}
+      </Box>
+    </Fade>
+  );
+}
+
+ScrollTop.propTypes = {
+  children: PropTypes.element.isRequired,
+  window: PropTypes.func,
+};
+
+
+const Header = (props) => {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
-  // const handleChangeIndex = (index) => {
-  //   setValue(index);
-  // };
-
   return (
+    <>
     <Box>
       <AppBar
         position="static"
         style={{
-          backgroundColor: "var(--main-col)",
+          backgroundColor: "var(--main-header-red)",
           color: "black",
           display: "flex",
           flexDirection: "row",
@@ -115,26 +155,14 @@ const Header = () => {
           />
         </Tabs>
       </AppBar>
-
-      {/* <SwipeableViews
-        axis={theme.direction === "rtl" ? "x-reverse" : "x"}
-        index={value}
-        onChangeIndex={handleChangeIndex}
-        style={{ backgroundColor: "black" }}
-      >
-       
-          
-        <TabPanel value={value} index={0} dir={theme.direction}>
-         
-        </TabPanel>
-        <TabPanel value={value} index={1} dir={theme.direction}></TabPanel>
-        <TabPanel value={value} index={2} dir={theme.direction}>
-         
-        </TabPanel>
-        <TabPanel value={value} index={3} dir={theme.direction}></TabPanel>
-        
-      </SwipeableViews> */}
+      <Toolbar id="back-to-top-anchor" />
     </Box>
+     <ScrollTop {...props}>
+     <Fab size="small" aria-label="scroll back to top">
+       <KeyboardArrowUpIcon />
+     </Fab>
+   </ScrollTop>
+   </>
   );
 };
 
