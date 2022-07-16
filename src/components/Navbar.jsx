@@ -127,32 +127,32 @@ const Navbar = () => {
         <Divider />
         <List>
               <ListItem disablePadding>
-                <ListItemButton >
                 <NavLink to="/" style={{textDecoration:'none',color:'black'}} onClick={handleDrawerClose}>
+                <ListItemButton >
                   <ListItemText primary="Home" />
-                  </NavLink>
                 </ListItemButton>
+                  </NavLink>
               </ListItem>
               <ListItem disablePadding>
-                <ListItemButton >
                     <NavLink to="/about" style={{textDecoration:'none',color:'black'}} onClick={handleDrawerClose}>
+                <ListItemButton >
                   <ListItemText primary="About" />
-                  </NavLink>
                 </ListItemButton>
+                  </NavLink>
               </ListItem>
               <ListItem disablePadding>
-                <ListItemButton >
                 <NavLink to="/project" style={{textDecoration:'none',color:'black'}} onClick={handleDrawerClose}>
+                <ListItemButton >
                   <ListItemText primary="Projects" />
-                  </NavLink>
                 </ListItemButton>
+                  </NavLink>
               </ListItem>
               <ListItem disablePadding>
-                <ListItemButton >
                 <NavLink to="/workexperience" style={{textDecoration:'none',color:'black'}} onClick={handleDrawerClose}>
+                <ListItemButton >
                   <ListItemText primary="Work Experience" />
-                  </NavLink>
                 </ListItemButton>
+                  </NavLink>
               </ListItem>
             {/* )
           )} */}
