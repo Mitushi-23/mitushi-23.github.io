@@ -1,14 +1,7 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
 import { AllProjects } from "./ProjectInfo";
-import { useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
-import MobileStepper from "@mui/material/MobileStepper";
-import Button from "@mui/material/Button";
-import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
-import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
-// import SwipeableViews from "react-swipeable-views";
-// import { MinorProject } from "./ProjectInfo";
 import { Link } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkIcon from "@mui/icons-material/Link";
@@ -16,7 +9,7 @@ import "./Project.css";
 
 function MinorProjectCarousel() {
   return (
-    <Box sx={{ maxWidth: 400, margin: "auto" }}>
+    <Box sx={{ maxWidth: 800, margin: "auto" }}>
       <Carousel>
         {AllProjects.map(
           (Project) =>
@@ -36,9 +29,9 @@ function MinorProjectCarousel() {
                         src={require("../../assets/projects/" +
                           Project.image +
                           ".png")}
+                          alt=""
                         height="100%"
                         width="100%"
-                        //   alt={review.author}
                       />
                     </div>
                     <div className="design_1" style={{backgroundColor:`${Project.tag_colour}`}}></div>
@@ -51,7 +44,6 @@ function MinorProjectCarousel() {
                         </li>
                         <li>
                           {
-                            // console.log(Project.site_link)
                             Project.site_link === "" ? (
                               <Link href="">
                                 <LinkIcon />

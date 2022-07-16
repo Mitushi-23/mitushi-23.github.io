@@ -14,7 +14,7 @@ const ProjectDesc = () => {
 
   return (
     <>
-      <div>
+      <div style={{marginTop:'5%'}}>
         <div style={{ marginLeft: "5%" }}>
           <NavLink
             to="/project"
@@ -25,8 +25,8 @@ const ProjectDesc = () => {
             }}
           >
             <ArrowBackIcon />
-          </NavLink>
           &nbsp;GO BACK
+          </NavLink>
         </div>
 
         <Grid className="home ab" container style={{ justifyContent: "center" }} marginTop="5%">

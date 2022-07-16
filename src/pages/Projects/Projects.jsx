@@ -5,7 +5,6 @@ import "./Project.css";
 import MinorProjectCarousel from "./MinorProjectCarousel";
 import ProjectCard from "./ProjectCard";
 import ProjectsNav from "./ProjectsNav";
-import Entry from "../Entry";
 
 const Projects = () => {
   return (
@@ -20,7 +19,7 @@ const Projects = () => {
           All Projects
         </Typography>
         <ProjectsNav/>
-        <div className="wrapper">
+        <div >
           <ProjectCard/>
         </div>
       </Container>

@@ -115,7 +115,7 @@
   position: relative;
   display: flex;
   align-items: flex-end;
-  width: 250px;
+  /* width: 250px; */
   height: 280px;
   border-radius: 16px;
   overflow: hidden;
@@ -157,7 +157,7 @@
 .social-icons {
   position: relative;
   top: 50%;
-  left: 50%;
+  left: 79%;
   transform: translate(-50%, -50%);
   z-index: 3;
   display: flex;

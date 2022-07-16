@@ -12,7 +12,7 @@ export const AllProjects = [
     github_link: 'https://github.com/Mitushi-23/iNotebook',
     tag_colour:'deeppink',
     tag:'MERN Stack',
-    category:'major'
+    category:'major',height:'250px',
   },
   {
     id: '12',
@@ -27,7 +27,7 @@ export const AllProjects = [
     github_link: 'https://github.com/Mitushi-23/eCommerce-website',
     tag_colour:'deeppink',
     tag:'MERN Stack',
-    category:'major'
+    category:'major',height:'380px'
   },
   {
     id: '2',
@@ -41,7 +41,7 @@ export const AllProjects = [
     madeUsing: 'HTML5, CSS and Vanilla JavaScript.',
     tag_colour:'var(--title-colo)',
     tag:'Vanilla JS',
-    category:'major'
+    category:'major',height:'170px'
   },
   {
     id: '3',
@@ -55,9 +55,21 @@ export const AllProjects = [
     github_link: 'https://github.com/Mitushi-23/BreakOut',
     tag_colour:'coral',
     tag:'CANVAS',
-    category:'major'
+    category:'major',height:'190px'
   },
- 
+  {
+    id: '5',
+    image: 'textApp',
+    title: 'My TextApp',
+    site_link: 'https://mytextapp.netlify.app/',
+    desc:
+      'TextApp allows the user to convert text to upperCase or lowerCase, removes extra spaces, copy the text, count the number of characters and words and also tells the time required to read that text,capitalize the text and also downloads the generated new text.',
+    madeUsing: 'React JS.',
+    github_link: 'https://github.com/Mitushi-23/Text-App',
+    tag_colour:'darkviolet',
+    tag:'React JS',
+    category:'major',height:'400px'
+  },
   {
     id: '4',
     image: 'digitalClock',
@@ -69,7 +81,7 @@ export const AllProjects = [
     github_link: 'https://github.com/Mitushi-23/Digital-Clock',
     tag_colour:'darkviolet',
     tag:'React JS',
-    category:'major'
+    category:'major',height:'260px'
   },
   {
     id: '6',
@@ -84,21 +96,9 @@ export const AllProjects = [
     github_link: 'https://github.com/Python-ProT/msteams-attendance',
     tag_colour:'var(--colour-blue)',
     tag:'Python',
-    category:'major'
+    category:'major',height:'260px'
   }, 
-  {
-    id: '5',
-    image: 'textApp',
-    title: 'My TextApp',
-    site_link: 'https://mytextapp.netlify.app/',
-    desc:
-      'TextApp allows the user to convert text to upperCase or lowerCase, removes extra spaces, copy the text, count the number of characters and words and also tells the time required to read that text,capitalize the text and also downloads the generated new text.',
-    madeUsing: 'React JS.',
-    github_link: 'https://github.com/Mitushi-23/Text-App',
-    tag_colour:'darkviolet',
-    tag:'React JS',
-    category:'major'
-  },
+  
 
   
   {
