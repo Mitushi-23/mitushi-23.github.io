@@ -60,12 +60,12 @@ export const AllProjects = [
   {
     id: '5',
     image: 'textApp',
-    title: 'My TextApp',
-    site_link: 'https://mytextapp.netlify.app/',
+    title: 'Textify',
+    site_link: 'https://textify-app.netlify.app/',
     desc:
-    'TextApp allows the user to convert text to upperCase or lowerCase, removes extra spaces, copy the text, count the number of characters and words and also tells the time required to read that text,capitalize the text and also downloads the generated new text.',
-    madeUsing: 'React JS.',
-    github_link: 'https://github.com/Mitushi-23/Text-App',
+    'In Textify you can modify your text as per your need.It allows you to write and even record your text.By clicking start button you can record your text and then add it to preview section.In the preview section you can even copy your text or can print it by click on copy and print icon respectively.It also counts the number of words, characters and minutes to read.',
+    madeUsing: 'React JS and Material UI.',
+    github_link: 'https://github.com/Mitushi-23/Textify',
     tag_colour:'darkviolet',
     tag:'React JS',
     category:'major',height:'200px'
