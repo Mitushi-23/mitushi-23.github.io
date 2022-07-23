@@ -4,6 +4,7 @@ import 'react-vertical-timeline-component/style.min.css';
 import StarIcon from '@mui/icons-material/Star';
 import WorkIcon from '@mui/icons-material/Work';
 import { Typography } from '@mui/material';
+import CardMembershipIcon from '@mui/icons-material/CardMembership';
 const WorkExperience = () => {
   return (
     <>
@@ -16,11 +17,14 @@ const WorkExperience = () => {
     className="vertical-timeline-element--work"
     contentStyle={{ background: 'var(--primary)', color: '#fff' }}
     contentArrowStyle={{ borderRight: '7px solid  var(--primary)' }}
-    date="May 2022 - present"
+    date="May 2022 - July 2022"
     iconStyle={{ background: 'var(--primary)', color: '#fff' }}
     icon={<WorkIcon />}
   >
     <Typography variant='h6' className="vertical-timeline-element-title" style={{fontFamily:'var(--play)',fontWeight:'bold'}}>MERN Stack Developer <br /> CompactGyan</Typography>
+    <a className='cert' href="https://drive.google.com/file/d/1Fye8Jh0g32OhKpVLEWJC_HNc5W00QKlI/view?usp=sharing" target="_blank">
+      <CardMembershipIcon  style={{cursor:'pointer',color:'white'}}/>
+      </a>
     <Typography>
       Development of site using ReactJS and material UI as a framwork, integeration of REST APIs and implementation of backeng using NodeJS.
     </Typography>

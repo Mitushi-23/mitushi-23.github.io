@@ -64,6 +64,10 @@ a:hover {
   transform: translateY(2px);
 }
 
+.cert :hover{
+  color:var(--bl);
+}
+
 @media (max-width:1500px) {
 .home{
   display: flex !important;
