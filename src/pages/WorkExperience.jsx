@@ -25,6 +25,26 @@ const WorkExperience = () => {
       <VerticalTimeline>
       <VerticalTimelineElement
           className="vertical-timeline-element--work"
+          contentStyle={{ background: "var(--primary)", color: "#fff" }}
+          contentArrowStyle={{ borderRight: "7px solid  var(--primary)" }}
+          date="May 2023 - Present"
+          iconStyle={{ background: "var(--primary)", color: "#fff" }}
+          icon={<WorkIcon />}
+        >
+          <Typography
+            variant="h6"
+            className="vertical-timeline-element-title"
+            style={{ fontFamily: "var(--play)", fontWeight: "bold" }}
+          >
+            Software Development Engineer <br /> PayPal India Pvt. Ltd.
+          </Typography>
+          
+          <Typography>
+          Contributing as an SDE intern at PayPal, actively collaborating with a team of engineers to contribute to the development of new features and enhancements.
+          </Typography>
+        </VerticalTimelineElement>
+      <VerticalTimelineElement
+          className="vertical-timeline-element--work"
           date="Sept 2022 - present"
           iconStyle={{ background: "var(--main-colo)", color: "#fff" }}
           contentStyle={{ background: "var(--main-colo)", color: "#fff" }}
