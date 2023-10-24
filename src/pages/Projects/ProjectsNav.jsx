@@ -16,7 +16,7 @@ const ProjectsNav = () => {
           <NavLink to="/project/vanilla_js"> <i className="fab fa-js" style={{fontSize:'40px',color:'var(--title-colo)',margin:'0px 10px'}}></i></NavLink>
           </Tooltip>
           <Tooltip title="MERN Stack" arrow placement="top">
-          <NavLink to="/project/mern_stack"> <img src="https://www.hireinmetaverse.com/wp-content/uploads/2022/11/full-stack-developer-mern-1024x1024-1-1024x1024.png" alt="" style={{width:'40px',color:'var(--main-colo)',margin:'0px 10px'}}/></NavLink>
+          <NavLink to="/project/mern_stack"> <img src="https://www.careernath.com/wp-content/uploads/2023/01/becomeamernstackdeveloper-mobile.png" alt="" style={{width:'40px',color:'var(--main-colo)',margin:'0px 10px'}}/></NavLink>
           </Tooltip>
           <Tooltip  title="All Projects" arrow placement="top">
           <NavLink className='all_project' to="/project" style={{textDecoration:'none',color:'var(--main-colo)',fontSize:'25px'}}> All Projects</NavLink>

@@ -7,7 +7,7 @@ import "react-vertical-timeline-component/style.min.css";
 import StarIcon from "@mui/icons-material/Star";
 import WorkIcon from "@mui/icons-material/Work";
 import { Typography } from "@mui/material";
-import CardMembershipIcon from "@mui/icons-material/CardMembership";
+import { experience } from "./WorkExperienceData";
 const WorkExperience = () => {
   return (
     <>
@@ -23,115 +23,27 @@ const WorkExperience = () => {
       </Typography>
       <br />
       <VerticalTimeline>
-      <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          contentStyle={{ background: "var(--primary)", color: "#fff" }}
-          contentArrowStyle={{ borderRight: "7px solid  var(--primary)" }}
-          date="May 2023 - Present"
-          iconStyle={{ background: "var(--primary)", color: "#fff" }}
-          icon={<WorkIcon />}
-        >
-          <Typography
-            variant="h6"
-            className="vertical-timeline-element-title"
-            style={{ fontFamily: "var(--play)", fontWeight: "bold" }}
+        {experience.map((item) => (
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: item.color, color: "#fff" }}
+            contentArrowStyle={{ borderRight: `7px solid  ${item.color}` }}
+            date={`${item.start_date} - ${item.end_date}`}
+            iconStyle={{ background: item.color, color: "#fff" }}
+            icon={<WorkIcon />}
           >
-            Software Development Engineer <br /> PayPal India Pvt. Ltd.
-          </Typography>
-          
-          <Typography>
-          Contributing as an SDE intern at PayPal, actively collaborating with a team of engineers to contribute to the development of new features and enhancements.
-          </Typography>
-        </VerticalTimelineElement>
-      <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          date="Sept 2022 - present"
-          iconStyle={{ background: "var(--main-colo)", color: "#fff" }}
-          contentStyle={{ background: "var(--main-colo)", color: "#fff" }}
-          contentArrowStyle={{ borderRight: "7px solid  var(--main-colo)" }}
-          icon={<WorkIcon />}
-        >
-          <Typography
-            variant="h6"
-            className="vertical-timeline-element-title"
-            style={{ fontFamily: "var(--play)", fontWeight: "bold" }}
-          >
-            Media and Marketing Lead <br /> CODAME Club,IIIT Bhopal
-          </Typography>
-          <Typography>
-            An active member at CODAME, IIIT Bhopal. Contributing to the club's events as a content writer.
-          </Typography>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          contentStyle={{ background: "var(--primary)", color: "#fff" }}
-          contentArrowStyle={{ borderRight: "7px solid  var(--primary)" }}
-          date="May 2022 - July 2022"
-          iconStyle={{ background: "var(--primary)", color: "#fff" }}
-          icon={<WorkIcon />}
-        >
-          <Typography
-            variant="h6"
-            className="vertical-timeline-element-title"
-            style={{ fontFamily: "var(--play)", fontWeight: "bold" }}
-          >
-            MERN Stack Developer <br /> CompactGyan
-          </Typography>
-          <a
-            className="cert"
-            href="https://drive.google.com/file/d/1Fye8Jh0g32OhKpVLEWJC_HNc5W00QKlI/view?usp=sharing"
-            target="_blank"
-          >
-            <CardMembershipIcon style={{ cursor: "pointer", color: "white" }} />
-          </a>
-          <Typography>
-            Development of site using ReactJS and material UI as a framwork,
-            integeration of REST APIs and implementation of backeng using
-            NodeJS.
-          </Typography>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          date="Mar 2022 - May 2022"
-          iconStyle={{ background: "var(--main-colo)", color: "#fff" }}
-          contentStyle={{ background: "var(--main-colo)", color: "#fff" }}
-          contentArrowStyle={{ borderRight: "7px solid  var(--main-colo)" }}
-          icon={<WorkIcon />}
-        >
-          <Typography
-            variant="h6"
-            className="vertical-timeline-element-title"
-            style={{ fontFamily: "var(--play)", fontWeight: "bold" }}
-          >
-            Full Stack Developer <br /> Reeya Community{" "}
-          </Typography>
+            <Typography
+              variant="h6"
+              className="vertical-timeline-element-title"
+              style={{ fontFamily: "var(--play)", fontWeight: "bold" }}
+            >
+              {item.role} <br /> {item.organization}
+            </Typography>
 
-          <Typography>
-            Worked as a full stack developer for the development of official
-            website of reeya community using ReactJS.
-          </Typography>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          date="Dec 2021 - present"
-          iconStyle={{ background: "var(--primary)", color: "#fff" }}
-          contentStyle={{ background: "var(--primary)", color: "#fff" }}
-          contentArrowStyle={{ borderRight: "7px solid  var(--primary)" }}
-          icon={<WorkIcon />}
-        >
-          <Typography
-            variant="h6"
-            className="vertical-timeline-element-title"
-            style={{ fontFamily: "var(--play)", fontWeight: "bold" }}
-          >
-            Web Development Team Member <br /> CODAME Club,IIIT Bhopal
-          </Typography>
-          <Typography>
-            An active member of Web Development Team of CODAME, IIIT Bhopal. A
-            contributor in hosting web development events and in the offical
-            website building of the Codame Club.
-          </Typography>
-        </VerticalTimelineElement>
+            <Typography>{item.desc}</Typography>
+          </VerticalTimelineElement>
+        ))}
+
         <VerticalTimelineElement
           iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
           icon={<StarIcon />}
